@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --bg-color: #fbf3fa;
+  --yellow: #a5551f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", "san-serif";
+}
+
+.recipeExplained {
+  width: 600px;
+  margin: 200px auto;
+  background-color: var(--bg-color);
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+  padding: 1rem;
+  max-width: 100%;
+}
+
+.recipeExplained .head {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recipeExplained .image {
+  width: calc(100% - 10px);
+  margin: 10px;
+}
+
+.recipeExplained .image img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.recipeExplained .data {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.recipeExplained .data #tags span {
+  color: rgb(37, 150, 190);
+}
+
+.recipeExplained .data > p {
+  margin: 10px;
+}
+
+.recipeExplained .data p span a {
+  text-decoration: none;
+  color: var(--yellow);
+}
+
+.recipeExplained .data p span a:hover {
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+
+.recipeExplained .data .ing {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  margin: 0 1rem;
+  list-style: circle;
+}
+
+.main-container {
+  width: 600px;
+  margin: 200px auto;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px #fcfcfc;
+  border: 1px solid var(--bg-color);
+}
+
+.header {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+}
+
+.header .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .text h2 {
+  color: var(--yellow);
+  font-weight: normal;
+  font-size: 1.3rem;
+  font-family: "Dancing Script";
+}
+
+#text-input {
+  border: none;
+  outline: none;
+  border: 1px solid var(--yellow);
+  border-radius: 5px;
+  line-height: 20px;
+  height: 20px;
+}
+
+#search:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.fav-meals {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  margin: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-angle-left:hover,
+.fa-angle-right:hover,
+.fav-meals .img #remove-food:hover,
+.personalize .head .fa-times:hover,
+.daily-recipe .fa-plus:hover,
+.meal-searched-container .fa-plus:hover,
+.recipeExplained .head #icon-remove:hover{
+  transform: scale(1.5);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.fav-meals .img {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: normal;
+  font-size: 10px;
+  max-width: 50%;
+  position: relative;
+}
+
+.fav-meals .img img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: none;
+}
+
+.fav-meals .img #remove-food {
+  position: absolute;
+  right: 0.1rem;
+  top: -5px;
+}
+
+.personalize {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to left, #9695ed, #2596be);
+  font-weight: normal;
+  color: white;
+  padding: 10px;
+  margin: 0 1rem;
+  border-radius: 5px;
+}
+
+.personalize .head {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.personalize .head .fa-times {
+  font-size: 1rem;
+}
+
+.personalize h3 {
+  justify-self: flex-start;
+  align-self: flex-start;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.personalize .button {
+  border: 1px solid var(--bg-color);
+  padding: 3px 0.5rem;
+  border-radius: 1rem;
+}
+
+.daily-recipe {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin: 1rem;
+  position: relative;
+  border: 1px solid var(--bg-color);
+  border-radius: 15px;
+}
+
+.daily-recipe .title {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  padding: 5px 10px;
+  z-index: 4;
+  background-color: var(--bg-color);
+  font-size: 0.7rem;
+  max-width: 50%;
+}
+
+.daily-recipe .daily-recipe-img {
+  width: 100%;
+  height: 90%;
+  border-radius: 15px;
+}
+
+.daily-recipe .fa-plus {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  z-index: 4;
+  color: white;
+  font-weight: bold;
+  size: 30px;
+}
+
+.daily-recipe .description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 5px;
+  font-size: 0.75rem;
+}
+
+.meals {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--bg-color);
+}
+
+.meal-searched-container {
+  padding: 1rem auto;
+  border-bottom: 1px solid var(--yellow);
+  margin: 10px 0;
+  position: relative;
+}
+
+.meal-image {
+  width: 100%;
+  height: 90%;
+  border-radius: 5px;
+}
+
+.meal-image:hover,
+.fav-meals .img:hover,
+.daily-recipe img:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+.line-bottom {
+  width: 100%;
+  height: 1px;
+  background-color: var(--yellow);
+}
+
+.meal-searched-container #plus-icon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: white;
+}
+
+.fav-meals .no-meals {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  margin: auto ;
+}
+
+.eval {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+@media(max-width:767px){
+  .recipeExplained,.main-container{
+    width: 400px;
+  }
+}

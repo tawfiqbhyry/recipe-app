@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe app</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dancing Script"
+      rel="stylesheet"
+    />
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="recipeExplained">
+      <div class="head">
+        <p></p>
+        <p id="title">recipe title</p>
+        <i id="icon-remove" class="fa fa-times" aria-hidden="true"></i>
+      </div>
+      <div class="image">
+        <img
+          src="https:\/\/www.themealdb.com\/images\/media\/meals\/xxyupu1468262513.jpg"
+          alt="recipe-image"
+        />
+      </div>
+      <div class="data">
+        <p id="recipe-id">Recipe ID: <span></span></p>
+        <p id="recipe-title">Recipe title: <span></span></p>
+        <p id="recipe-area">Area: <span></span></p>
+        <p id="recipe-category">Category: <span></span></p>
+        <p id="recipe-instructions">Instructions: <span></span></p>
+        <p>Ingrediants: <span></span></p>
+        <ul id="ingrediants" class="ing"></ul>
+        <p id="video">
+          Video:
+          <span class="ing"
+            ><a href="https://www.youtube.com">Video simplifies this recipe</a
+          ></span>
+        </p>
+        <p id="tags">Tags: <span></span></p>
+      </div>
+    </div>
+
+    <div class="main-container">
+      <div class="header">
+        <div class="text">
+          <h2>Recipe app</h2>
+        </div>
+        <input
+          type="text"
+          name="search-meal"
+          id="text-input"
+          title="enter meal name"
+        />
+        <i class="fa-light fa-search" id="search"></i>
+      </div>
+
+      <div class="fav-meals">
+        <i class="fa-duotone fa-angle-left"></i>
+        <h2 class="no-meals">No meals saved</h2>
+        <div class="img">
+          <i class="fa fa-times" aria-hidden="true" id="remove-food"></i>
+          <img
+            src="https:\/\/www.themealdb.com\/images\/media\/meals\/xxyupu1468262513.jpg"
+            alt=""
+          />
+          <p>Seafood</p>
+        </div>
+        <i class="fa-duotone fa-angle-right"></i>
+      </div>
+
+      <div class="personalize">
+        <div class="head">
+          <h2>Personalize</h2>
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <h3>your recommendations</h3>
+        <div class="button">start personalization</div>
+      </div>
+
+      <div class="daily-recipe">
+        <div class="title"><h4>daily recipe</h4></div>
+        <img
+          src="https:\/\/www.themealdb.com\/images\/media\/meals\/xxyupu1468262513.jpg"
+          class="daily-recipe-img"
+          alt="daily recipe image"
+        />
+        <i class="fa-light fa-plus"></i>
+        <div class="description">
+          <p class="meal-description">great meal to eat.</p>
+          <div class="eval">
+            <i class="fa-light fa-star" id="1-star"></i>
+            <i class="fa-light fa-star" id="2-star"></i>
+            <i class="fa-light fa-star" id="3-star"></i>
+            <i class="fa-light fa-star" id="4-star"></i>
+            <i class="fa-light fa-star" id="5-star"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="meals"></div>
+    </div>
+  </body>
+</html>
